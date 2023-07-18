@@ -9,10 +9,10 @@ import groupRoutes from './routes/groupRoutes';
 const app: Application = express();
 const server: http.Server = http.createServer(app);
 const io: Server = new Server(server,{cors: {
-  origin: 'https://d1g4q894ebfo9f.cloudfront.net/',
+  origin: 'https://d1g4q894ebfo9f.cloudfront.net',
 }
 });
-app.use(cors({origin: 'https://d1g4q894ebfo9f.cloudfront.net/'}));
+app.use(cors({origin: 'https://d1g4q894ebfo9f.cloudfront.net'}));
 const groupToSocket=new Map<string,string>()
 const socketToGroupId=new Map<string,string>()
 
