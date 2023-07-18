@@ -10,8 +10,9 @@ const app: Application = express();
 const server: http.Server = http.createServer(app);
 const io: Server = new Server(server,{cors: {
   origin: 'https://d1g4q894ebfo9f.cloudfront.net',
-}
-});
+  methods: ['GET', 'POST'], // You can specify the allowed methods
+  allowedHeaders: ['Authorization',"Content-type"], // You can specify the allowed headers
+}},);
 app.use(cors());
 const groupToSocket=new Map<string,string>()
 const socketToGroupId=new Map<string,string>()
