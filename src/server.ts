@@ -9,7 +9,7 @@ import groupRoutes from './routes/groupRoutes';
 const app: Application = express();
 const server: http.Server = http.createServer(app);
 const io: Server = new Server(server,{cors: {origin:"*"}});
-app.use(cors());
+app.use(cors({origin:"*"}));
 const groupToSocket=new Map<string,string>()
 const socketToGroupId=new Map<string,string>()
 
