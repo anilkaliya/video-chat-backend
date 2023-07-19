@@ -12,7 +12,7 @@ let groups: Group[] = [];
 
 // Create a new group
 export const createGroup = (req: Request, res: Response) => {
-  console.log("here")
+  
   const { name } = req.body;
   const group: Group = { id: uuidv4(), name };
   groups.push(group);
