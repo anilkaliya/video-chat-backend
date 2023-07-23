@@ -23,3 +23,9 @@ export const createGroup = (req: Request, res: Response) => {
 export const getGroups = (req: Request, res: Response) => {
   res.status(200).json({ groups });
 };
+export const deleteGroup=(req:Request,res:Response)=>{
+  const params=req.params ;
+  const {groupId}=params
+  groups=groups.filter(group=>group.id!==groupId)
+  res.status(200).json({"message":"Group Deleted"})
+}

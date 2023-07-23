@@ -1,7 +1,7 @@
 // groupRoutes.ts
 
 import express from 'express';
-import { createGroup, getGroups } from '../controllers/groupController';
+import { createGroup, deleteGroup, getGroups } from '../controllers/groupController';
 
 const router = express.Router();
 
@@ -10,5 +10,6 @@ router.post('/groups', createGroup);
 
 // Get all groups
 router.get('/groups', getGroups);
+router.delete('/groups/:groupId',deleteGroup)
 
 export default router;
